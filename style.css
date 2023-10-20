@@ -1,0 +1,126 @@
+@keyframes duck-fly-1 {
+    0% {
+        left: -65px;
+        top: 80vh;
+    }
+    50% {
+        left: 44vw;
+        top: 66vh;
+    }
+    100% {
+        left: 100vw;
+        top: 32vh;
+    }
+}
+@keyframes duck-fly-2 {
+    0% {
+        left: -65px;
+        top: 74vh;
+    }
+    50% {
+        left: 53vw;
+        top: 18vh;
+    }
+    100% {
+        left: 100vw;
+        top: 75vh;
+    }
+}
+@keyframes duck-fly-3 {
+    0% {
+        left: -65px;
+        top: 10vh;
+    }
+    50% {
+        left: 25vw;
+        top: 65vh;
+    }
+    100% {
+        left: 100vw;
+        top: 46vh;
+    }
+}
+@keyframes duck-fly-4 {
+    0% {
+        left: -65px;
+        top: 82vh;
+    }
+    50% {
+        left: 50vw;
+        top: 26vh;
+    }
+    100% {
+        left: 100vw;
+        top: 30vh;
+    }
+}
+@keyframes duck-fly-5 {
+    0% {
+        left: -65px;
+        top: 31vh;
+    }
+    50% {
+        left: 40vw;
+        top: 75vh;
+    }
+    100% {
+        left: 100vw;
+        top: 18vh;
+    }
+}
+.body {
+    counter-reset: count;
+    height: 100vh;
+    margin: 0;
+    background-image: url(bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.duck-check {
+    position: absolute;
+    visibility: hidden;
+    left: -99999999px;
+}
+.duck-check:checked {
+    counter-increment: count;
+}
+.duck-check:checked ~ label {
+    display: none;
+}
+
+.content-info {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#43dde5, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content-info::before {
+    content: counter(count);
+}
+
+.duck {
+    position: absolute;
+}
+.duck__fly {
+    width: 65px;
+}
+.duck_1 {
+    animation: duck-fly-1 5s ease-in 1s both;
+}
+.duck_2 {
+    animation: duck-fly-2 5s ease-in 2s both;
+}
+.duck_3 {
+    animation: duck-fly-3 5s ease-in 3s both;
+}
+.duck_4 {
+    animation: duck-fly-4 5s ease-in 4s both;
+}
+.duck_5 {
+    animation: duck-fly-5 5s ease-in 5s both;
+} /*# sourceMappingURL=style.css.map */
