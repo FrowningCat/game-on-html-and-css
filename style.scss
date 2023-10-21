@@ -5,17 +5,27 @@ $countDuck: 5;
     @keyframes duck-fly-#{$i} {
         0% {
             left: -$widthDuck;
-            top: random(70) + vh;
+            top: random(75) + vh;
+        }
+
+        25% {
+            left: random(25) + vw;
+            top: random(75) + vh;
         }
 
         50% {
-            left: random(60) + vw;
-            top: random(70) + vh;
+            left: random(50) + vw;
+            top: random(75) + vh;
+        }
+
+        75% {
+            left: random(75) + vw;
+            top: random(75) + vh;
         }
 
         100% {
             left: 100vw;
-            top: random(70) + vh;
+            top: random(75) + vh;
         }
     }
 }
@@ -60,7 +70,7 @@ $countDuck: 5;
 .duck {
     position: absolute;
     &__fly {
-        width: $withDuck;
+        width: $widthDuck;
     }
     @for $i from 1 through $countDuck {
         &_#{$i} {

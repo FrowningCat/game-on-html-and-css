@@ -1,126 +1,167 @@
 @keyframes duck-fly-1 {
-    0% {
-        left: -65px;
-        top: 80vh;
-    }
-    50% {
-        left: 44vw;
-        top: 66vh;
-    }
-    100% {
-        left: 100vw;
-        top: 32vh;
-    }
+  0% {
+    left: -65px;
+    top: 29vh;
+  }
+  25% {
+    left: 20vw;
+    top: 38vh;
+  }
+  50% {
+    left: 7vw;
+    top: 10vh;
+  }
+  75% {
+    left: 43vw;
+    top: 7vh;
+  }
+  100% {
+    left: 100vw;
+    top: 42vh;
+  }
 }
 @keyframes duck-fly-2 {
-    0% {
-        left: -65px;
-        top: 74vh;
-    }
-    50% {
-        left: 53vw;
-        top: 18vh;
-    }
-    100% {
-        left: 100vw;
-        top: 75vh;
-    }
+  0% {
+    left: -65px;
+    top: 24vh;
+  }
+  25% {
+    left: 12vw;
+    top: 19vh;
+  }
+  50% {
+    left: 27vw;
+    top: 72vh;
+  }
+  75% {
+    left: 50vw;
+    top: 29vh;
+  }
+  100% {
+    left: 100vw;
+    top: 31vh;
+  }
 }
 @keyframes duck-fly-3 {
-    0% {
-        left: -65px;
-        top: 10vh;
-    }
-    50% {
-        left: 25vw;
-        top: 65vh;
-    }
-    100% {
-        left: 100vw;
-        top: 46vh;
-    }
+  0% {
+    left: -65px;
+    top: 40vh;
+  }
+  25% {
+    left: 4vw;
+    top: 69vh;
+  }
+  50% {
+    left: 28vw;
+    top: 63vh;
+  }
+  75% {
+    left: 41vw;
+    top: 2vh;
+  }
+  100% {
+    left: 100vw;
+    top: 10vh;
+  }
 }
 @keyframes duck-fly-4 {
-    0% {
-        left: -65px;
-        top: 82vh;
-    }
-    50% {
-        left: 50vw;
-        top: 26vh;
-    }
-    100% {
-        left: 100vw;
-        top: 30vh;
-    }
+  0% {
+    left: -65px;
+    top: 72vh;
+  }
+  25% {
+    left: 18vw;
+    top: 24vh;
+  }
+  50% {
+    left: 39vw;
+    top: 8vh;
+  }
+  75% {
+    left: 20vw;
+    top: 47vh;
+  }
+  100% {
+    left: 100vw;
+    top: 3vh;
+  }
 }
 @keyframes duck-fly-5 {
-    0% {
-        left: -65px;
-        top: 31vh;
-    }
-    50% {
-        left: 40vw;
-        top: 75vh;
-    }
-    100% {
-        left: 100vw;
-        top: 18vh;
-    }
+  0% {
+    left: -65px;
+    top: 68vh;
+  }
+  25% {
+    left: 25vw;
+    top: 66vh;
+  }
+  50% {
+    left: 31vw;
+    top: 43vh;
+  }
+  75% {
+    left: 54vw;
+    top: 42vh;
+  }
+  100% {
+    left: 100vw;
+    top: 73vh;
+  }
 }
 .body {
-    counter-reset: count;
-    height: 100vh;
-    margin: 0;
-    background-image: url(bg.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .duck-check {
-    position: absolute;
-    visibility: hidden;
-    left: -99999999px;
+  position: absolute;
+  visibility: hidden;
+  left: -99999999px;
 }
 .duck-check:checked {
-    counter-increment: count;
+  counter-increment: count;
 }
 .duck-check:checked ~ label {
-    display: none;
+  display: none;
 }
 
 .content-info {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#43dde5, #f0f0f0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#43dde5, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .content-info::before {
-    content: counter(count);
+  content: counter(count);
 }
 
 .duck {
-    position: absolute;
+  position: absolute;
 }
 .duck__fly {
-    width: 65px;
+  width: 65px;
 }
 .duck_1 {
-    animation: duck-fly-1 5s ease-in 1s both;
+  animation: duck-fly-1 5s ease-in 1s both;
 }
 .duck_2 {
-    animation: duck-fly-2 5s ease-in 2s both;
+  animation: duck-fly-2 5s ease-in 2s both;
 }
 .duck_3 {
-    animation: duck-fly-3 5s ease-in 3s both;
+  animation: duck-fly-3 5s ease-in 3s both;
 }
 .duck_4 {
-    animation: duck-fly-4 5s ease-in 4s both;
+  animation: duck-fly-4 5s ease-in 4s both;
 }
 .duck_5 {
-    animation: duck-fly-5 5s ease-in 5s both;
-} /*# sourceMappingURL=style.css.map */
+  animation: duck-fly-5 5s ease-in 5s both;
+}/*# sourceMappingURL=style.css.map */
